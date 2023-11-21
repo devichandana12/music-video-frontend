@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './Componets/Footer';
+import Header from './Componets/Header';
+import Landingpage from './pages/Landingpage';
+import Home from './pages/Home';
+import WatchHistory from './pages/WatchHistory';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className="Container m-5">
+
+
+        <Routes>
+
+          {/* list the pages that want to redirect */}
+          <Route path='/' element={<Landingpage />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/watchhistory' element={<WatchHistory />} />
+
+        </Routes>
+
+
+        {/* <WatchHistory /> */}
+
+      </div>
+      <Footer />
+    </>
   );
 }
 

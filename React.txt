@@ -1,0 +1,166 @@
+React --- js (front end development)
+----------------------------------
+
+React is not a programming language but a JavaScript library for building user interfaces (UIs) and web applications. It was developed by Facebook
+
+
+create a project in react 
+-----------------------------
+
+npx create-react-app demo   
+
+//demo-- name of the app
+
+
+to run react project
+
+npm start
+
+ctrl+c   to exit the running
+
+
+
+// to get free bootstrap theme ---> https://bootswatch.com/
+
+
+
+
+basic commands
+--- - to create project : npx create-react-app projectname
+--- - to run project : npm start
+
+-- to install react material --> npm install @mui/material @emotion/react @emotion/styled
+-- to build a project ---> npm build
+-- to instatll react bootstrap --> npm install react-bootstrap bootstrap
+
+
+--- to get react bootstrap theme -> search bootswatch
+
+
+
+
+
+basic concept
+
+	-- reusable component based approach
+	-- jsx:javascript xml  (combination of codes of js and xml)
+	-- fast
+
+frontend difference 
+
+
+concept                  angular                                  react                                 vue
+-----------------------------------------------------------------------------------------------------------------------
+
+1.developer        framework--google(product)         library---meta/facebook(product)              framework---opensource
+
+2.Language         typescript 			      javascript based                              javascript based
+
+3.Dom              real dom			      virtual dom				    virtual dom
+
+4.Data sharing	   two way data binding		      one way data binding			    two way data binding
+
+
+
+<App/> self closing selector
+
+
+
+
+
+two types of components
+
+-- function based --> also know as stateless component --loading the structure--> rcfe
+-- class based --> also know as sateful component   --- loading the structure --> rcc 
+
+function based
+
+-- Also known as Stateless components as they simply accept data and display them in some form,
+--  they are mainly responsible for rendering UI.
+-- doesnt contain any default funtion for createing state
+
+
+
+-- react hook -- pre-defined function    -->  They let you use state and other React features without writing a class.
+										 -->  Hooks can only be used in functional components, not in-class components.
+										 -->  To create hook --> hook name should  start with "use" keyword
+										 -->  hook is introdused after 16th version of react
+
+										 why we use hook: to create state .In functional based component there is no predefined function to create state. so it uses hook to create state
+
+					create a state using hook
+
+					syntax 
+					------
+
+						use predefined-function()
+
+						use state()
+              
+			  state creation syntax
+
+			  		const [state_name,state_value_updation_function] = useState()
+					
+
+
+
+
+
+class based 
+
+-- A class component requires you to extend from React. Component and                                                                                    	create a render function that returns a React element.
+-- must have the render() method
+-- contain default funtion for state creation
+
+
+
+state 
+-----
+	-> state is used to store values( also, state has an advantage to transfer value)
+	-> we can share state to child component
+
+ porps 
+------
+	props is used to share data between parent and child
+
+
+condional rendering
+-------------------
+
+
+
+
+
+
+26/10/2023
+
+
+install axios library 
+npm i axios
+
+
+Features
+----------
+
+
+	1. Make XMLHttpRequests from the browser
+	2. Make http requests from node.js
+	3. Supports the Promise API
+	4. Intercept request and response
+	5. Transform request and response data
+	6. Cancel requests
+	7. Automatic transforms for JSON data
+	8. 🆕 Automatic data object serialization to multipart/form-data and x-www-form-urlencoded body encodings
+	9. Client side support for protecting against XSRF
+
+// created a file for specifying common api call
+
+commonrequest.js
+
+specify different configuration
+method, url,data,headers
+
+pass the method url and body as an argument to the commonrequest function
+
+define api calling
+
